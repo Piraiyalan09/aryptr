@@ -1,0 +1,200 @@
+/* Theme variables and global styles */
+
+/* Hogwarts Dark (default theme) */
+.hogwarts-dark {
+    --background-color: #313E4B;
+    --heading-color: #DEDCD5;
+    --text-color: #E1E1E1;
+    --secondary-color: #ff6600;
+    --text-background-color: #3F4A56;
+}
+
+/* Hogwarts Light */
+.hogwarts-light {
+    --background-color: #F7F4EF;
+    --heading-color: #24292F;
+    --text-color: #333333;
+    --secondary-color: #F39C12;
+    --text-background-color: #E9E8E6;
+}
+
+/* Gryffindor */
+.gryffindor {
+    --background-color: #7F0909;
+    --heading-color: #FFD700;
+    --text-color: #FFFFFF;
+    --secondary-color: #D4AF37;
+    --text-background-color: #5D0202;
+}
+
+/* Hufflepuff */
+.hufflepuff {
+    --background-color: #EEE117;
+    --heading-color: #000000;
+    --text-color: #333333;
+    --secondary-color: #FFD700;
+    --text-background-color: #FFEB3B;
+}
+
+/* Ravenclaw */
+.ravenclaw {
+    --background-color: #0E1A40;
+    --heading-color: #B08D57;
+    --text-color: #E0E2E4;
+    --secondary-color: #8B4513;
+    --text-background-color: #1C3A6E;
+}
+
+/* Slytherin */
+.slytherin {
+    --background-color: #1A472A;
+    --heading-color: #C0C0C0;
+    --text-color: #D4D4D4;
+    --secondary-color: #9E9E9E;
+    --text-background-color: #2A6041;
+}
+
+/* General styling applied across themes */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header styles */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--background-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.icon-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    width: 90px;
+    height: 90px;
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.logo-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+    animation: glow 5s infinite alternate;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.theme-toggle img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain; /* Ensure theme icon keeps aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover img {
+    transform: scale(1.1); /* Add zoom effect on hover */
+}
+
+/* Content section */
+main {
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    font-family: "Henny Penny", system-ui;
+    color: var(--heading-color);
+}
+
+.heading {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.centered-image {
+    width: 70%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    background-color: var(--text-background-color);
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    font-size: 1.1em;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Glow effect */
+@keyframes glow {
+    0% {
+        filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4));
+    }
+    50% {
+        filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+    }
+    100% {
+        filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4));
+    }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2em;
+    }
+
+    .centered-image {
+        width: 90%;
+    }
+
+    .logo {
+        width: 120px;
+    }
+}
