@@ -10,12 +10,12 @@ const themes = [
 ];
 
 const themeLogos = {
-    'hogwarts-dark': '/type/assets/hogwarts-dark-logo.png',
-    'hogwarts-light': '/type/assets/hogwarts-light-logo.png',
-    'gryffindor': '/type/assets/gryffindor-logo.png',
-    'hufflepuff': '/type/assets/hufflepuff-logo.png',
-    'ravenclaw': '/type/assets/ravenclaw-logo.png',
-    'slytherin': '/type/assets/slytherin-logo.png'
+    'hogwarts-dark': '/assets/hogwarts-dark-logo.png',
+    'hogwarts-light': '/assets/hogwarts-light-logo.png',
+    'gryffindor': '/assets/gryffindor-logo.png',
+    'hufflepuff': '/assets/hufflepuff-logo.png',
+    'ravenclaw': '/assets/ravenclaw-logo.png',
+    'slytherin': '/assets/slytherin-logo.png'
 };
 
 let currentThemeIndex = 0; // Start with the first theme (Hogwarts Dark)
